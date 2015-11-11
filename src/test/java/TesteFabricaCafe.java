@@ -5,8 +5,8 @@
  */
 
 
-import br.ifes.leticia.cafeteriabwsingleton.cdp.Cafe;
-import br.ifes.leticia.cafeteriabwsingleton.util.FabricaCafe;
+import br.ifes.leticia.cafeteriadecorator.cdp.Cafe;
+import br.ifes.leticia.cafeteriadecorator.util.FabricaCafe;
 import org.junit.Assert;
 import org.junit.Test;
 
