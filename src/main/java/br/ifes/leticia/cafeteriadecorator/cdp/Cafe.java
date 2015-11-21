@@ -27,7 +27,7 @@ public class Cafe extends CafeAbstrato{
         this.preco = preco;
     }
 
-    
+    @Override
     public String getNome() {
         return nome;
     }
@@ -36,6 +36,7 @@ public class Cafe extends CafeAbstrato{
         this.nome = nome;
     }
 
+    @Override
     public ArrayList<Ingrediente> getIngredientes() {
         return ingredientes;
     }
@@ -45,6 +46,7 @@ public class Cafe extends CafeAbstrato{
         this.ingredientes = ingrediente;
     }
     
+    @Override
     public void getInformacao() {
         String quebraLinha = System.getProperty("line.separator");
         System.out.println(quebraLinha+ "Cafe {" + "tipo = " + getNome() + 

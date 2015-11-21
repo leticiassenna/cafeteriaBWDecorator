@@ -5,7 +5,6 @@
  */
 package br.ifes.leticia.cafeteriadecorator.util;
 
-import br.ifes.leticia.cafeteriadecorator.cdp.Cafe;
 import br.ifes.leticia.cafeteriadecorator.cdp.ICafe;
 import br.ifes.leticia.cafeteriadecorator.cdp.Ingrediente;
 import java.util.ArrayList;
@@ -16,13 +15,23 @@ import java.util.ArrayList;
 public abstract class ComponenteAbstrato extends CafeAbstrato{
     protected ICafe decoratedCafe;
     
-    public ComponenteAbstrato (Cafe cafe){
-        cafe.getIngredientes();
+    public ComponenteAbstrato (ICafe cafe){        
         decoratedCafe = cafe;      
     }
 
+    public ICafe getDecoratedCafe() {
+        return decoratedCafe;
+    }
+
+    public void setDecoratedCafe(ICafe decoratedCafe) {
+        this.decoratedCafe = decoratedCafe;
+    }
+    
+
     @Override
-    public abstract float getPreco() ;
+    public final float getPreco() {
+        return (float) (decoratedCafe.getPreco()+ preco);
+    }
 
     @Override
     public abstract String getNome() ;
@@ -32,5 +41,6 @@ public abstract class ComponenteAbstrato extends CafeAbstrato{
 
     @Override
     public abstract void getInformacao() ;
+
 
 }

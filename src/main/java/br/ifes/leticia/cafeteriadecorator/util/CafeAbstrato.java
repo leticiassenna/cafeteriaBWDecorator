@@ -14,9 +14,11 @@ import java.util.ArrayList;
  * @author Leticia
  */
 public abstract class CafeAbstrato implements ICafe{
+    float preco;
     
     @Override
     public abstract float getPreco();
+    
 
     @Override
     public abstract String getNome() ;
@@ -26,5 +28,6 @@ public abstract class CafeAbstrato implements ICafe{
 
     @Override
     public abstract void getInformacao() ;
+
     
 }

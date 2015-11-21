@@ -5,7 +5,7 @@
  */
 package br.ifes.leticia.cafeteriadecorator.util;
 
-import br.ifes.leticia.cafeteriadecorator.cdp.Cafe;
+import br.ifes.leticia.cafeteriadecorator.cdp.ICafe;
 import br.ifes.leticia.cafeteriadecorator.cdp.Ingrediente;
 import java.util.ArrayList;
 
@@ -15,14 +15,11 @@ import java.util.ArrayList;
  */
 public class ComponenteLicor extends ComponenteAbstrato{
 
-    public ComponenteLicor(Cafe cafe) {
+    public ComponenteLicor(ICafe cafe) {
         super(cafe);
+        this.preco = (float)2.5;
     }
 
-    @Override
-    public float getPreco() {
-        return (float) (decoratedCafe.getPreco()+ 2.5);
-    }
 
     @Override
     public String toString() {
@@ -31,6 +28,7 @@ public class ComponenteLicor extends ComponenteAbstrato{
         
     }
 
+    
     @Override
     public String getNome() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

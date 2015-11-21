@@ -5,7 +5,7 @@
  */
 package br.ifes.leticia.cafeteriadecorator.util;
 
-import br.ifes.leticia.cafeteriadecorator.cdp.Cafe;
+import br.ifes.leticia.cafeteriadecorator.cdp.ICafe;
 import br.ifes.leticia.cafeteriadecorator.cdp.Ingrediente;
 import java.util.ArrayList;
 /**
@@ -14,21 +14,20 @@ import java.util.ArrayList;
  */
 public class ComponenteChantili extends ComponenteAbstrato{
 
-    public ComponenteChantili(Cafe cafe) {
+    public ComponenteChantili(ICafe cafe) {
         super(cafe);
+        this.preco = 1;
     }
 
-    @Override
-    public float getPreco() {
-        return (float) (decoratedCafe.getPreco()+ 1);
-    }
-
+   
     @Override
     public String toString() {
         return "Adicao de chantili, Preco final = " + this.getPreco();
         
     }
 
+   
+    
     @Override
     public String getNome() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

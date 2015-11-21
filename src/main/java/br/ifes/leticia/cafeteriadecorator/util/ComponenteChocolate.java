@@ -5,7 +5,7 @@
  */
 package br.ifes.leticia.cafeteriadecorator.util;
 
-import br.ifes.leticia.cafeteriadecorator.cdp.Cafe;
+import br.ifes.leticia.cafeteriadecorator.cdp.ICafe;
 import br.ifes.leticia.cafeteriadecorator.cdp.Ingrediente;
 import java.util.ArrayList;
 /**
@@ -14,14 +14,12 @@ import java.util.ArrayList;
  */
 public class ComponenteChocolate extends ComponenteAbstrato{
 
-    public ComponenteChocolate(Cafe cafe) {
-        super(cafe);   
+    public ComponenteChocolate(ICafe cafe) {
+        super(cafe);
+        this.preco = (float)0.5;
     }
     
-    @Override
-    public final float getPreco() {
-        return (float) (decoratedCafe.getPreco()+ 0.5);
-    }
+   
     
     @Override
     public String toString() {
@@ -29,6 +27,8 @@ public class ComponenteChocolate extends ComponenteAbstrato{
                 
     }
 
+    
+    
     @Override
     public String getNome() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -43,7 +43,7 @@ public class ComponenteChocolate extends ComponenteAbstrato{
     public void getInformacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-   
+
+     
     
 }

@@ -30,25 +30,26 @@ public class TesteDecorator {
     {
         ICafe cafeFeito = fabricaCafe.criarCafe("CafeNormal");
         cafeFeito = new ComponenteChocolate((Cafe) cafeFeito);
-        Assert.assertSame(cafeFeito.getPreco(), 2.5);
+        Assert.assertEquals(cafeFeito.getPreco(), 2.5, 0.0001);
+       
     }
     
-    //@Test
+    @Test
     public void testFactoryCafeCappuccino() 
     {
         
         ICafe cafe = fabricaCafe.criarCafe("CafeCappuccino");
         cafe = new ComponenteChantili((Cafe) cafe);
-        Assert.assertSame((float)cafe.getPreco(), 6.0);
+        Assert.assertEquals((float)cafe.getPreco(), 6.0, 0.0001);
     }
     
-    //@Test
+    @Test
     public void testFactoryCafeDescafeinado() 
     {
         
         ICafe cafe = fabricaCafe.criarCafe("CafeDescafeinado");
         cafe = new ComponenteCremeLaranja((Cafe) cafe);
-        Assert.assertSame((float)cafe.getPreco(), 4.5);
+        Assert.assertEquals((float)cafe.getPreco(), 4.5, 0.0001);
     }
 
     // TODO add test methods here.
